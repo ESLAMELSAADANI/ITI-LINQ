@@ -481,6 +481,73 @@ namespace Day01
 
             #endregion
 
+            #region 06 - Partitioning Operators
+
+            #region Q01 - Get the first 3 orders from customers in Washington
+
+            //var res = CustomerList.Where(c => c.Country == "Mexico").SelectMany(c => c.Orders).Take(3);
+
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            #endregion
+
+            #region Q02 - Get all but the first 2 orders from customers in Washington.
+
+            //var res = CustomerList.Where(c => c.Country == "Mexico").GroupBy(c => c.CustomerID).Select(g => new { Customer = g.Key, Orders = g.SelectMany(c => c.Orders.Take(2)) });
+
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine($"{item.Customer}:");
+            //    foreach (var order in item.Orders)
+            //    {
+            //        Console.WriteLine($"- {order}");
+            //    }
+            //    Console.WriteLine();
+            //}
+
+            #endregion
+
+            #region Q03 - Return elements starting from the beginning of the array until a number is hit that is less than its position in the array.
+
+            //int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+            //var res = numbers.TakeWhile((n, i) => n >= i);
+
+            //foreach (var item in res)
+            //{
+            //    Console.Write($"{item} ");
+            //}
+
+            #endregion
+
+            #region Q04 - Get the elements of the array starting from the first element divisible by 3.
+
+            //int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+            //var res = numbers.SkipWhile(n => n % 3 != 0);
+
+            //foreach (var item in res)
+            //{
+            //    Console.Write($"{item} ");//3 9 8 6 7 2 0
+            //}
+
+            #endregion
+
+            #region Q05 - Get the elements of the array starting from the first element less than its position.
+
+            //int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+            //var res = numbers.SkipWhile((n, i) => n > i);
+
+            //foreach (var item in res)
+            //{
+            //    Console.Write($"{item} ");//1 3 9 8 6 7 2 0
+            //}
+
+            #endregion
+
+            #endregion
+
         }
 
         static void Demo(string[] args)
