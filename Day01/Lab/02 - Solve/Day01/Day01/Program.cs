@@ -47,7 +47,37 @@ namespace Day01
 
             #endregion
 
+            #region 02 - Element Operator
 
+            #region Q01 - Get first Product out of Stock 
+
+            //var res = ProductList.FirstOrDefault(p => p.UnitsInStock == 0);
+            //var res02 = ProductList.Where(p => p.UnitsInStock == 0).FirstOrDefault();
+
+            //Console.WriteLine(res);// ProductID:5,ProductName:Chef Anton's Gumbo Mix,CategoryCondiments,UnitPrice:21.3500,UnitsInStock:0
+            //Console.WriteLine(res02);// ProductID:5,ProductName:Chef Anton's Gumbo Mix,CategoryCondiments,UnitPrice:21.3500,UnitsInStock:0
+
+            #endregion
+
+            #region Q02 - Return the first product whose Price > 1000, unless there is no match, in which case null is returned.
+
+            //var res = ProductList.FirstOrDefault(p => p.UnitPrice > 1000);//Null
+
+            //Console.WriteLine(res);
+
+            #endregion
+
+            #region Q03 - Retrieve the second number .greater than 5 
+
+            //int[] Arr = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+
+            //var res = Arr.Where(n => n > 5).Skip(1).First();
+
+            //Console.WriteLine(res);//8
+
+            #endregion
+
+            #endregion
         }
 
         static void Demo(string[] args)
