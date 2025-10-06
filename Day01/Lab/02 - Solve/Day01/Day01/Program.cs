@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Globalization;
+using System.Runtime.Intrinsics.X86;
 using static Day01.ListGenerators;
+using static System.Net.Mime.MediaTypeNames;
 namespace Day01
 {
     internal class Program
@@ -685,6 +687,70 @@ namespace Day01
             //    foreach (var p in item.Products)
             //    {
             //        Console.WriteLine($"  ProductName:{p.ProductName} - Stock:{p.UnitsInStock}");
+            //    }
+            //}
+
+            #endregion
+
+            #endregion
+
+            #region 09 - Grouping Operators
+
+            #region Q01 - Use group by to partition a list of numbers by their remainder when divided by 5
+
+            //List<int> nums = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
+
+            //var res = nums.GroupBy(n => n % 5);
+            //foreach (var group in res)
+            //{
+            //    Console.WriteLine($"Numbers with a remainder of {group.Key} when divided by 5:");
+            //    foreach (var num in group)
+            //    {
+            //        Console.WriteLine(num);
+            //    }
+            //}
+
+            #endregion
+
+            #region Q02 - Uses group by to partition a list of words by their first letter.Use dictionary_english.txt for Input
+
+            //string[] words;
+            //try
+            //{
+            //    words = File.ReadAllLines("dictionary_english.txt");
+            //}
+            //catch (Exception ex)
+            //{
+
+            //    Console.WriteLine($"Error reading file: {ex.Message}");
+            //    words = Array.Empty<string>();
+            //}
+
+            //var res = words.GroupBy(w => w[0]).Select(g => new {firstLetter = g.Key , Words = g});
+
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine($"{item.firstLetter}:");
+            //    foreach (var word in item.Words)
+            //    {
+            //        Console.WriteLine($" - {word}");
+            //    }
+            //}
+
+            #endregion
+
+            #region Q03 - Consider this Array as an Input, Use Group By with a custom comparer that matches words that are consists of the same Characters Together
+
+            //string[] Arr = { "from   ", " salt", " earn ", "  last   ", " near ", " form  " };
+
+            //var res = Arr.GroupBy(w => w, new WordsComparer());
+
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine("...");
+            //    foreach (var w in item)
+            //    {
+            //        Console.WriteLine(w.Trim());
             //    }
             //}
 
