@@ -638,6 +638,60 @@ namespace Day01
 
             #endregion
 
+            #region 08 - Quantifiers Operators
+
+            #region Q01 - Determine if any of the words in dictionary_english.txt (Read dictionary_english.txt into Array of String First) contain the substring 'ei'.
+
+            //string[] words;
+            //try
+            //{
+            //    words = File.ReadAllLines("dictionary_english.txt");
+            //}
+            //catch (Exception ex)
+            //{
+
+            //    Console.WriteLine($"Error reading file: {ex.Message}");
+            //    words = Array.Empty<string>();
+            //}
+
+            //var res = words.Any(str => str.Contains("ei"));
+
+            //Console.WriteLine(res);//True
+
+            #endregion
+
+            #region Q02 - Return a grouped a list of products only for categories that have at least one product that is out of stock.
+
+            //var res = ProductList.GroupBy(p => p.Category).Where(g => g.Any(p => p.UnitsInStock == 0)).Select(g => new { Category = g.Key, Products = g });
+
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine($"{item.Category}:");
+            //    foreach (var p in item.Products)
+            //    {
+            //        Console.WriteLine($"  ProductName:{p.ProductName} - Stock:{p.UnitsInStock}");
+            //    }
+            //}
+
+            #endregion
+
+            #region Q03 - Return a grouped a list of products only for categories that have all of their products in stock.
+
+            //var res = ProductList.GroupBy(p => p.Category).Where(g => g.All(p => p.UnitsInStock != 0)).Select(g => new { Category = g.Key, Products = g });
+
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine($"{item.Category}:");
+            //    foreach (var p in item.Products)
+            //    {
+            //        Console.WriteLine($"  ProductName:{p.ProductName} - Stock:{p.UnitsInStock}");
+            //    }
+            //}
+
+            #endregion
+
+            #endregion
+
         }
 
         static void Demo(string[] args)
