@@ -78,6 +78,66 @@ namespace Day01
             #endregion
 
             #endregion
+
+            #region 03 - Set Operators
+
+            #region Q01 - Find the unique Category names from Product List
+
+            //var res = ProductList.UnionBy(ProductList, p => p.Category).Select(p => new { Id = p.ProductID, p.Category });
+
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            #endregion
+
+            #region Q02 - Produce a Sequence containing the unique first letter from both product and customer names.
+
+            //var res = ProductList.Select(p => p.ProductName[0]).Union(CustomerList.Select(c => c.CustomerID[0]));
+
+            //foreach (var item in res)
+            //{
+            //    Console.Write(value: $"{item} ");//C A G U N M I Q K T P S R B J Z V F E W L O D H
+            //}
+
+            #endregion
+
+            #region Q03 - Create one sequence that contains the common first letter from both product and customer names.
+
+            //var res = ProductList.Select(p => p.ProductName[0]).Intersect(CustomerList.Select(c => c.CustomerID[0]));
+
+            //foreach (var item in res)
+            //{
+            //    Console.Write(value: $"{item} ");//C A G N M I Q K T P S R B V F E W L O
+            //}
+
+            #endregion
+
+            #region Q04 - Create one sequence that contains the first letters of product names that are not also first letters of customer names.
+
+            //var res = ProductList.Select(p => p.ProductName[0]).Except(CustomerList.Select(c => c.CustomerID[0]));
+
+            //foreach (var item in res)
+            //{
+            //    Console.Write(value: $"{item} ");//U J Z
+            //}
+
+            #endregion
+
+            #region Q05 - Create one sequence that contains the last Three Characters in each names of all customers and products, including any duplicates
+
+            //var res = ProductList.Select(p => p.ProductName.Substring(p.ProductName.Length - 3)).Concat(CustomerList.Select(c => c.CustomerID.Substring(c.CustomerID.Length - 3)));
+
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            #endregion
+
+            #endregion
+
         }
 
         static void Demo(string[] args)
@@ -470,7 +530,7 @@ namespace Day01
             #endregion
 
             #region Concat() -> Concat 2 sequences with Repeat
-            
+
             //Console.WriteLine("\n========= l1 Concat l2 ==============");
             //var result = l1.Concat(l2);
 
