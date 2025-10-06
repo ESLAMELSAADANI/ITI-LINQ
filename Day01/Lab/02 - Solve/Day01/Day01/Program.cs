@@ -138,6 +138,252 @@ namespace Day01
 
             #endregion
 
+            #region 04 - Aggregate Operators
+
+            #region Q01 - Uses Count to get the number of odd numbers in the array
+
+            //int[] Arr = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+
+            //var res = Arr.Count(n => n % 2 == 1);
+            //Console.WriteLine(res);//5
+
+            #endregion
+
+            #region Q02 - Return a list of customers and how many orders each has.
+
+            //var res = CustomerList.Select(c => new { c.CustomerID, Orders = c.Orders.Length });
+
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            #endregion
+
+            #region Q03 - Return a list of categories and how many products each has
+
+            //var res = ProductList.GroupBy(p => p.Category).Select(g => new {Category = g.Key,Count = g.Count()});
+
+            //foreach (var group in res)
+            //{
+            //    Console.WriteLine(group);
+            //}
+
+            #endregion
+
+            #region Q04 - Get the total of the numbers in an array.
+
+            //int[] Arr = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+
+            //var res = Arr.Count();
+            //Console.WriteLine(res);//10
+
+            #endregion
+
+            #region Q05 - Get the total number of characters of all words in dictionary_english.txt (Read dictionary_english.txt into Array of String First).
+
+            //string[] words;
+            //try
+            //{
+            //    words = File.ReadAllLines("dictionary_english.txt");
+            //}
+            //catch (Exception ex)
+            //{
+
+            //    Console.WriteLine($"Error reading file: {ex.Message}");
+            //    words = Array.Empty<string>();
+            //}
+
+            //var res = words.Sum(w => w.Length);
+            //Console.WriteLine(res);//3494678
+
+            #endregion
+
+            #region Q06 - Get the total units in stock for each product category.
+
+            //var res = ProductList.GroupBy(p => p.Category).Select(g => new { Category = g.Key, UnitsInStock = g.Sum(g => g.UnitsInStock) });
+
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            #endregion
+
+            #region Q07 - Get the length of the shortest word in dictionary_english.txt (Read dictionary_english.txt into Array of String First).
+
+            //string[] words;
+            //try
+            //{
+            //    words = File.ReadAllLines("dictionary_english.txt");
+            //}
+            //catch (Exception ex)
+            //{
+
+            //    Console.WriteLine($"Error reading file: {ex.Message}");
+            //    words = Array.Empty<string>();
+            //}
+
+            //var res = words.Min(w => w.Length);
+            //Console.WriteLine(res);//1
+
+            ////To Get The Word
+            ////string shortestWord = words.OrderBy(w => w.Length).First();
+            ////int Length = shortestWord.Length;
+
+            ////Console.WriteLine($"shortest Word = {shortestWord}\nLength = {Length}");
+
+
+            #endregion
+
+            #region Q08 - Get the cheapest price among each category's products
+
+            //var res = ProductList.GroupBy(p => p.Category).Select(g => new { Category = g.Key, CheapestPrice = g.Min(g => g.UnitPrice) });
+
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine($"Category:{item.Category}, Cheapest Price: {item.CheapestPrice:c}");
+            //}
+
+            #endregion
+
+            #region Q09 - Get the products with the cheapest price in each category (Use Let)
+
+            //var res =
+            //        from p in ProductList
+            //        group p by p.Category into g
+            //        let minPrice = g.Min(x => x.UnitPrice)
+            //        from prod in g
+            //        where prod.UnitPrice == minPrice
+            //        select new
+            //        {
+            //            Category = g.Key,
+            //            ProductName = prod.ProductName,
+            //            Price = prod.UnitPrice
+            //        };
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            #endregion
+
+            #region Q10 - Get the length of the longest word in dictionary_english.txt (Read dictionary_english.txt into Array of String First).
+
+            //string[] words;
+            //try
+            //{
+            //    words = File.ReadAllLines("dictionary_english.txt");
+            //}
+            //catch (Exception ex)
+            //{
+
+            //    Console.WriteLine($"Error reading file: {ex.Message}");
+            //    words = Array.Empty<string>();
+            //}
+
+            ////Length
+            //var res = words.Max(w => w.Length);
+            //Console.WriteLine(res);//31
+
+            ////Word
+            //var word = words.OrderByDescending(w => w.Length).First();
+            //Console.WriteLine(word);//dichlorodiphenyltrichloroethane
+
+
+            #endregion
+
+            #region Q11 - Get the most expensive price among each category's products.
+
+            //var res = ProductList.GroupBy(p => p.Category).Select(g => new { Category = g.Key, expensivePrice = g.Max(p => p.UnitPrice) });
+
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            #endregion
+
+            #region Q12 - Get the products with the most expensive price in each category.
+
+            #region 01 - Query Suntax
+
+            //var result = from p in ProductList
+            //             group p by p.Category into g
+            //             let maxPrice = g.Max(p => p.UnitPrice)
+            //             from product in g
+            //             where product.UnitPrice == maxPrice
+            //             select new
+            //             {
+            //                 Category = g.Key,
+            //                 ProductName = product.ProductName,
+            //                 Price = product.UnitPrice
+            //             };
+
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine($"Category: {item.Category} - ProductName: {item.ProductName} - Price: {item.Price:c}");
+            //} 
+
+            #endregion
+
+            #region 02 - Fluent Syntax
+
+            //var res = ProductList.GroupBy(p => p.Category)
+            //                     .SelectMany(g =>
+            //                     {
+            //                         var minPrice = g.Min(x => x.UnitPrice);
+            //                         return g.Where(p => p.UnitPrice == minPrice)
+            //                                 .Select(p => new
+            //                                 {
+            //                                     Category = g.Key,
+            //                                     ProductName = p.ProductName,
+            //                                     Price = p.UnitPrice
+            //                                 });
+            //                     });
+
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine($"Category: {item.Category} - ProductName: {item.ProductName} - Price: {item.Price:c}");
+            //} 
+
+            #endregion
+
+            #endregion
+
+            #region Q13 - Get the average length of the words in dictionary_english.txt (Read dictionary_english.txt into Array of String First).
+
+            //string[] words;
+            //try
+            //{
+            //    words = File.ReadAllLines("dictionary_english.txt");
+            //}
+            //catch (Exception ex)
+            //{
+
+            //    Console.WriteLine($"Error reading file: {ex.Message}");
+            //    words = Array.Empty<string>();
+            //}
+
+            //var res = words.Average(w => w.Length);
+            //Console.WriteLine($"{res:F2}");//9.44
+
+
+            #endregion
+
+            #region Q14 - Get the average price of each category's products.
+
+            //var res = ProductList.GroupBy(p => p.Category).Select(g => new { Category = g.Key, AvgPrice = g.Average(x => x.UnitPrice) });
+
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine($"Category = {item.Category} - AvgPrice = {item.AvgPrice:c2}");
+            //}
+
+            #endregion
+
+            #endregion
+
         }
 
         static void Demo(string[] args)
