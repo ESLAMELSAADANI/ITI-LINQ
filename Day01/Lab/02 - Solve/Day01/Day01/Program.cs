@@ -384,6 +384,103 @@ namespace Day01
 
             #endregion
 
+            #region 05 - Ordering Operators
+
+            #region Q01 - Sort a list of products by name
+
+            //var res = ProductList.OrderBy(p => p.ProductName);
+
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            #endregion
+
+            #region Q02 - Uses a custom comparer to do a case-insensitive sort of the words in an array.
+
+            //string[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+
+            //var res = Arr.OrderBy(str => str, new StringComparer());
+            //foreach (var item in res)
+            //{
+            //    Console.Write($"{item} ");//AbAcUs aPPLE BlUeBeRrY bRaNcH cHeRry ClOvEr
+            //}
+
+            #endregion
+
+            #region Q03 - Sort a list of products by units in stock from highest to lowest.
+
+            //var res = ProductList.OrderByDescending(p => p.UnitPrice);
+
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            #endregion
+
+            #region Q04 - Sort a list of digits, first by length of their name, and then alphabetically by the name itself.
+
+            //string[] Arr = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+            //var res = Arr.OrderBy(str => str.Length).ThenBy(str => str);
+
+            //foreach (var item in res)
+            //{
+            //    Console.Write($"{item} ");//one six two five four nine zero eight seven three
+            //}
+
+            #endregion
+
+            #region Q05 - Sort first by word length and then by a case-insensitive sort of the words in an array.
+
+            //string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+            //var res = words.OrderBy(str => str.Length).ThenBy(str => str, new StringComparer());
+
+            //foreach (var item in res)
+            //{
+            //    Console.Write($"{item} ");//aPPLE AbAcUs bRaNcH cHeRry ClOvEr BlUeBeRrY
+            //}
+
+            #endregion
+
+            #region Q06 - Sort a list of products, first by category, and then by unit price, from highest to lowest.
+
+            //var res = ProductList.OrderByDescending(p => p.Category).ThenByDescending(p => p.UnitPrice);
+
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            #endregion
+
+            #region Q07 - Sort first by word length and then by a case-insensitive descending sort of the words in an array.
+
+            //string[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+            //var res = Arr.OrderByDescending(str => str.Length).ThenByDescending(str => str);
+
+            //foreach (var item in res)
+            //{
+            //    Console.Write($"{item} ");//BlUeBeRrY ClOvEr cHeRry bRaNcH AbAcUs aPPLE
+            //}
+
+            #endregion
+
+            #region Q08 - Create a list of all digits in the array whose second letter is 'i' that is reversed from the order in the original array.
+
+            //string[] Arr = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+            //var res = Arr.Reverse().Where(str => str[1] == 'i');
+
+            //foreach (var item in res)
+            //{
+            //    Console.Write($"{item} ");//nine eight six five
+            //}
+
+            #endregion
+
+            #endregion
+
         }
 
         static void Demo(string[] args)

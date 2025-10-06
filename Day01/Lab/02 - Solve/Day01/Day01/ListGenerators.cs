@@ -72,7 +72,7 @@ namespace Day01
 
         public override string ToString()
         {
-            return $"ProductID:{ProductID},ProductName:{ProductName},Category{Category},UnitPrice:{UnitPrice},UnitsInStock:{UnitsInStock}";
+            return $"ProductID:{ProductID},ProductName:{ProductName},Category:{Category},UnitPrice:{UnitPrice},UnitsInStock:{UnitsInStock}";
         }
     }
 
