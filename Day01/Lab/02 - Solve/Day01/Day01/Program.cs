@@ -548,6 +548,96 @@ namespace Day01
 
             #endregion
 
+            #region 07 - Projection Operators
+
+            #region Q01 - Return a sequence of just the names of a list of products.
+
+            //var res = ProductList.Select(p => p.ProductName);
+
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            #endregion
+
+            #region Q02 - Produce a sequence of the uppercase and lowercase versions of each word in the original array (Anonymous Types).
+
+            //string[] words = { "aPPLE", "BlUeBeRrY", "cHeRry" };
+
+            //var res = words.Select(w => new { Lower = w.ToLower(), Upper = w.ToUpper() });
+
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            #endregion
+
+            #region Q03 - Produce a sequence containing some properties of Products, including UnitPrice which is renamed to Price in the resulting type.
+
+            //var res = ProductList.Select(p => new { Name = p.ProductName, Price = p.UnitPrice });
+
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine($"Name:{item.Name}, Price:{item.Price:c}");
+            //}
+
+            #endregion
+
+            #region Q04 - Determine if the value of ints in an array match their position in the array.
+
+            //int[] Arr = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+
+            //var res = Arr.Select((n, i) => new { num = n, InPlace = (n == i) });
+
+            //Console.WriteLine("Number:In-Place?");
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine($"{item.num}:{item.InPlace}");
+            //}
+
+            #endregion
+
+            #region Q05 - Returns all pairs of numbers from both arrays such that the number from numbersA is less than the number from numbersB.
+
+            //int[] numbersA = { 0, 2, 4, 5, 6, 8, 9 };
+            //int[] numbersB = { 1, 3, 5, 7, 8 };
+
+            //var res = numbersA.SelectMany(a => numbersB, (a, b) => new { a, b }).Where(pair => pair.a < pair.b);
+
+            //Console.WriteLine("Pairs Where a < b:");
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine($"{item.a} is less than {item.b}");
+            //}
+
+            #endregion
+
+            #region Q06 - Select all orders where the order total is less than 500.00.
+
+            //var res = CustomerList.SelectMany(c => c.Orders).Where(c => c.Total < 500);
+
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            #endregion
+
+            #region Q07 - Select all orders where the order was made in 1998 or later.
+
+            //var res = CustomerList.SelectMany(c => c.Orders).Where(o => o.OrderDate.Year >= 1998);
+
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            #endregion
+
+            #endregion
+
         }
 
         static void Demo(string[] args)
