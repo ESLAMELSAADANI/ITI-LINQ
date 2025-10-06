@@ -9,6 +9,45 @@ namespace Day01
         static void Main(string[] args)
         {
 
+            #region 01 - Restriction Operators
+
+            #region Q01 - Find all products that are out of stock.
+
+            //var res = ProductList.Where(p => p.UnitsInStock == 0);
+
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            #endregion
+
+            #region Q02 - Find all products that are in stock and cost more than 3.00 per unit.
+
+            //var res = ProductList.Where(p => p.UnitsInStock != 0).Where(p => p.UnitPrice > (decimal)3);
+
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            #endregion
+
+            #region Q03 - Returns digits whose name is shorter than their value.
+
+            //string[] Arr = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+            //var res = Arr.Where((p, i) => p.Length < i);
+
+            //foreach (var item in res)
+            //{
+            //    Console.Write($"{item} ");//five six seven eight nine
+            //}
+
+            #endregion
+
+            #endregion
+
+
         }
 
         static void Demo(string[] args)
